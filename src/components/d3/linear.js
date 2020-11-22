@@ -27,7 +27,7 @@ const linear = (hook, data) => {
     // axis bottom
     svg.append("g")
       .attr('class', 'axis')
-      .attr("transform", "translate(0," + height + ")")
+      .attr("transform", `translate(0, ${height})`)
       .call(d3.axisBottom(x));
 
     // left axis
@@ -39,9 +39,9 @@ const linear = (hook, data) => {
     svg.append("path")
       .attr('class', 'axis')
       .data([data])
-      .attr("fill", "none")
+      .attr("fill", '#beccff')
       .attr("stroke", "blue")
-      .attr("stroke-width", 1.5)
+      .attr("stroke-width", 3.5)
       .attr("d", d3.line()
         .x(d => x(d.x))
         .y(d => y(d.y))
