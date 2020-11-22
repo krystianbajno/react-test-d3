@@ -1,6 +1,7 @@
 import * as React from "react"
 import LinearGraph from "./components/d3/LinearGraph";
 import {useEffect, useState} from "react";
+import BarChart from "./components/d3/BarChart";
 
 
 const generateRandom = (m, l) => {
@@ -36,6 +37,10 @@ const App = () => {
         <details open>
           <summary>Linear graph</summary>
           <LinearGraph data={randomData} />
+        </details>
+        <details open>
+          <summary>Bar Chart</summary>
+          <BarChart data={randomData} />
         </details>
         <div className="controls">
           <input
